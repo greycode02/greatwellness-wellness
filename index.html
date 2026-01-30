@@ -1,0 +1,1431 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GreatWellness Services | Person-Centered Healthcare Staffing</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        :root {
+            --primary: #2a6e8a;
+            --secondary: #34a1c7;
+            --accent: #f15a29;
+            --light: #f8f9fa;
+            --dark: #343a40;
+            --gray: #6c757d;
+            --light-gray: #e9ecef;
+            --family-color: #4CAF50;
+            --person-centered: #9C27B0;
+        }
+        
+        body {
+            color: var(--dark);
+            line-height: 1.6;
+        }
+        
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 15px;
+        }
+        
+        /* Header & Navigation */
+        header {
+            background-color: white;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+        
+        .header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 0;
+        }
+        
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .logo i {
+            color: var(--primary);
+            font-size: 2rem;
+        }
+        
+        .logo h1 {
+            font-size: 1.8rem;
+            color: var(--primary);
+        }
+        
+        .logo span {
+            color: var(--accent);
+        }
+        
+        nav ul {
+            display: flex;
+            list-style: none;
+        }
+        
+        nav ul li {
+            margin-left: 30px;
+        }
+        
+        nav ul li a {
+            text-decoration: none;
+            color: var(--dark);
+            font-weight: 600;
+            font-size: 1rem;
+            transition: color 0.3s;
+        }
+        
+        nav ul li a:hover {
+            color: var(--accent);
+        }
+        
+        .mobile-menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            font-size: 1.5rem;
+            color: var(--primary);
+            cursor: pointer;
+        }
+        
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(rgba(42, 110, 138, 0.9), rgba(52, 161, 199, 0.8)), url('https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1153&q=80');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            padding: 100px 0;
+            text-align: center;
+        }
+        
+        .hero-content h2 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+        }
+        
+        .hero-content p {
+            font-size: 1.2rem;
+            max-width: 700px;
+            margin: 0 auto 30px;
+        }
+        
+        .btn {
+            display: inline-block;
+            background-color: var(--accent);
+            color: white;
+            padding: 12px 30px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1rem;
+            transition: all 0.3s;
+            border: none;
+            cursor: pointer;
+        }
+        
+        .btn:hover {
+            background-color: #d14a20;
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+        
+        .btn-secondary {
+            background-color: transparent;
+            border: 2px solid white;
+            margin-left: 15px;
+        }
+        
+        .btn-secondary:hover {
+            background-color: rgba(255, 255, 255, 0.1);
+        }
+        
+        .btn-outline {
+            background-color: transparent;
+            border: 2px solid var(--primary);
+            color: var(--primary);
+        }
+        
+        .btn-outline:hover {
+            background-color: var(--primary);
+            color: white;
+        }
+        
+        .btn-family {
+            background-color: var(--family-color);
+        }
+        
+        .btn-family:hover {
+            background-color: #3d8b40;
+        }
+        
+        .btn-person-centered {
+            background-color: var(--person-centered);
+        }
+        
+        .btn-person-centered:hover {
+            background-color: #7b1fa2;
+        }
+        
+        /* Person-Centered Banner */
+        .person-centered-banner {
+            background-color: var(--person-centered);
+            color: white;
+            padding: 30px 0;
+            text-align: center;
+        }
+        
+        .person-centered-banner h3 {
+            font-size: 1.8rem;
+            margin-bottom: 10px;
+        }
+        
+        .person-centered-banner p {
+            max-width: 800px;
+            margin: 0 auto;
+            font-size: 1.1rem;
+        }
+        
+        /* Services Section */
+        .services {
+            padding: 80px 0;
+            background-color: var(--light);
+        }
+        
+        .section-title {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+        
+        .section-title h2 {
+            font-size: 2.5rem;
+            color: var(--primary);
+            margin-bottom: 15px;
+        }
+        
+        .section-title p {
+            color: var(--gray);
+            max-width: 700px;
+            margin: 0 auto;
+        }
+        
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+        
+        .service-card {
+            background-color: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            transition: transform 0.3s;
+        }
+        
+        .service-card:hover {
+            transform: translateY(-10px);
+        }
+        
+        .service-icon {
+            background-color: var(--light-gray);
+            padding: 30px;
+            text-align: center;
+            font-size: 2.5rem;
+            color: var(--primary);
+        }
+        
+        .service-content {
+            padding: 25px;
+        }
+        
+        .service-content h3 {
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+            color: var(--primary);
+        }
+        
+        /* Person-Centered Approach Section */
+        .approach {
+            padding: 80px 0;
+            background-color: #f9f5ff;
+        }
+        
+        .approach .section-title h2 {
+            color: var(--person-centered);
+        }
+        
+        .approach-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 50px;
+            align-items: center;
+        }
+        
+        .approach-text h3 {
+            font-size: 2rem;
+            color: var(--person-centered);
+            margin-bottom: 20px;
+        }
+        
+        .approach-principles {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+        
+        .principle {
+            background-color: white;
+            padding: 25px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            text-align: center;
+            transition: transform 0.3s;
+        }
+        
+        .principle:hover {
+            transform: translateY(-5px);
+        }
+        
+        .principle i {
+            font-size: 2.5rem;
+            color: var(--person-centered);
+            margin-bottom: 15px;
+        }
+        
+        .principle h4 {
+            color: var(--person-centered);
+            margin-bottom: 10px;
+        }
+        
+        /* Family Care Section */
+        .family-care {
+            padding: 80px 0;
+            background-color: #f0f9f0;
+        }
+        
+        .family-care .section-title h2 {
+            color: var(--family-color);
+        }
+        
+        .family-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 40px;
+            align-items: center;
+        }
+        
+        .family-content h3 {
+            font-size: 2rem;
+            color: var(--family-color);
+            margin-bottom: 20px;
+        }
+        
+        .family-content ul {
+            list-style-type: none;
+            margin-bottom: 30px;
+        }
+        
+        .family-content li {
+            margin-bottom: 15px;
+            padding-left: 30px;
+            position: relative;
+        }
+        
+        .family-content li:before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: var(--family-color);
+            font-weight: bold;
+        }
+        
+        .family-image img {
+            width: 100%;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+        
+        /* Get Started Section */
+        .get-started {
+            padding: 80px 0;
+            background-color: white;
+        }
+        
+        .process-tabs {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 40px;
+            border-bottom: 2px solid var(--light-gray);
+            flex-wrap: wrap;
+        }
+        
+        .tab-btn {
+            padding: 15px 30px;
+            background: none;
+            border: none;
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: var(--gray);
+            cursor: pointer;
+            transition: all 0.3s;
+            position: relative;
+        }
+        
+        .tab-btn.active {
+            color: var(--primary);
+        }
+        
+        .tab-btn.active::after {
+            content: '';
+            position: absolute;
+            bottom: -2px;
+            left: 0;
+            width: 100%;
+            height: 3px;
+            background-color: var(--primary);
+        }
+        
+        .tab-content {
+            display: none;
+        }
+        
+        .tab-content.active {
+            display: block;
+            animation: fadeIn 0.5s ease;
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        
+        .process-steps {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+        
+        .step {
+            text-align: center;
+            padding: 30px 20px;
+            background-color: var(--light);
+            border-radius: 10px;
+            transition: transform 0.3s;
+        }
+        
+        .step:hover {
+            transform: translateY(-5px);
+        }
+        
+        .step-number {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 50px;
+            height: 50px;
+            background-color: var(--primary);
+            color: white;
+            border-radius: 50%;
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin-bottom: 20px;
+        }
+        
+        .step h3 {
+            margin-bottom: 15px;
+            color: var(--primary);
+        }
+        
+        .requirements {
+            background-color: var(--light);
+            padding: 30px;
+            border-radius: 10px;
+            margin-top: 40px;
+        }
+        
+        .requirements h3 {
+            color: var(--primary);
+            margin-bottom: 20px;
+        }
+        
+        .requirements ul {
+            list-style-position: inside;
+            margin-bottom: 20px;
+        }
+        
+        .requirements li {
+            margin-bottom: 10px;
+        }
+        
+        /* About Section */
+        .about {
+            padding: 80px 0;
+            background-color: var(--light);
+        }
+        
+        .about-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 50px;
+            align-items: center;
+        }
+        
+        .about-text h2 {
+            font-size: 2.5rem;
+            color: var(--primary);
+            margin-bottom: 20px;
+        }
+        
+        .about-text p {
+            margin-bottom: 20px;
+            color: var(--gray);
+        }
+        
+        .about-features {
+            margin-top: 30px;
+        }
+        
+        .feature {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 20px;
+        }
+        
+        .feature i {
+            color: var(--accent);
+            font-size: 1.2rem;
+            margin-right: 15px;
+            margin-top: 5px;
+        }
+        
+        /* Stats Section */
+        .stats {
+            padding: 60px 0;
+            background-color: var(--primary);
+            color: white;
+        }
+        
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 30px;
+            text-align: center;
+        }
+        
+        .stat-item h3 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+        }
+        
+        /* Contact Form Section */
+        .contact-form {
+            padding: 80px 0;
+            background-color: white;
+        }
+        
+        .contact-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 50px;
+        }
+        
+        .contact-info h3 {
+            font-size: 1.8rem;
+            color: var(--primary);
+            margin-bottom: 20px;
+        }
+        
+        .contact-details {
+            margin-top: 30px;
+        }
+        
+        .contact-details p {
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+        }
+        
+        .contact-details i {
+            color: var(--accent);
+            margin-right: 10px;
+            width: 20px;
+        }
+        
+        .form-group {
+            margin-bottom: 20px;
+        }
+        
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 600;
+            color: var(--dark);
+        }
+        
+        .form-group input,
+        .form-group select,
+        .form-group textarea {
+            width: 100%;
+            padding: 12px 15px;
+            border: 1px solid var(--light-gray);
+            border-radius: 5px;
+            font-size: 1rem;
+        }
+        
+        .form-group textarea {
+            min-height: 150px;
+            resize: vertical;
+        }
+        
+        /* CTA Section */
+        .cta {
+            padding: 80px 0;
+            background-color: var(--light);
+            text-align: center;
+        }
+        
+        .cta h2 {
+            font-size: 2.5rem;
+            color: var(--primary);
+            margin-bottom: 20px;
+        }
+        
+        .cta p {
+            max-width: 700px;
+            margin: 0 auto 30px;
+            color: var(--gray);
+        }
+        
+        /* Footer */
+        footer {
+            background-color: var(--dark);
+            color: white;
+            padding: 60px 0 20px;
+        }
+        
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+        
+        .footer-column h3 {
+            font-size: 1.3rem;
+            margin-bottom: 20px;
+            color: white;
+        }
+        
+        .footer-column p, .footer-column a {
+            color: var(--light-gray);
+            margin-bottom: 10px;
+            display: block;
+            text-decoration: none;
+        }
+        
+        .footer-column a:hover {
+            color: var(--accent);
+        }
+        
+        .social-icons {
+            display: flex;
+            gap: 15px;
+            margin-top: 20px;
+        }
+        
+        .social-icons a {
+            background-color: rgba(255, 255, 255, 0.1);
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            transition: all 0.3s;
+        }
+        
+        .social-icons a:hover {
+            background-color: var(--accent);
+            transform: translateY(-3px);
+        }
+        
+        .copyright {
+            text-align: center;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            color: rgba(255, 255, 255, 0.7);
+            font-size: 0.9rem;
+        }
+        
+        /* Mobile Responsiveness */
+        @media (max-width: 992px) {
+            .hero-content h2 {
+                font-size: 2.5rem;
+            }
+            
+            nav ul {
+                display: none;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                width: 100%;
+                background-color: white;
+                flex-direction: column;
+                box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+                padding: 20px 0;
+            }
+            
+            nav ul.show {
+                display: flex;
+            }
+            
+            nav ul li {
+                margin: 0;
+                text-align: center;
+                padding: 15px 0;
+            }
+            
+            .mobile-menu-btn {
+                display: block;
+            }
+            
+            .btn-secondary {
+                margin-left: 0;
+                margin-top: 15px;
+            }
+            
+            .process-tabs {
+                flex-direction: column;
+            }
+            
+            .tab-btn {
+                text-align: center;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .hero {
+                padding: 70px 0;
+            }
+            
+            .hero-content h2 {
+                font-size: 2rem;
+            }
+            
+            .section-title h2 {
+                font-size: 2rem;
+            }
+            
+            .about-text h2 {
+                font-size: 2rem;
+            }
+            
+            .cta h2 {
+                font-size: 2rem;
+            }
+            
+            .family-content h3 {
+                font-size: 1.8rem;
+            }
+            
+            .approach-text h3 {
+                font-size: 1.8rem;
+            }
+            
+            .person-centered-banner h3 {
+                font-size: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header & Navigation -->
+    <header>
+        <div class="container header-container">
+            <div class="logo">
+                <i class="fas fa-hand-holding-medical"></i>
+                <h1>Great<span>Wellness</span> Services</h1>
+            </div>
+            <button class="mobile-menu-btn" id="mobileMenuBtn">
+                <i class="fas fa-bars"></i>
+            </button>
+            <nav>
+                <ul id="navMenu">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#approach">Our Approach</a></li>
+                    <li><a href="#family-care">For Families</a></li>
+                    <li><a href="#get-started">Get Started</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <li><a href="tel:6472870676" class="btn" style="padding: 8px 15px; font-size: 0.9rem;">Call Now</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="container hero-content">
+            <h2>Person-Centered Healthcare Staffing</h2>
+            <p>GreatWellness Services provides qualified PSWs, DSWs, and healthcare professionals using a person-centered approach that focuses on individual needs, preferences, and values.</p>
+            <div style="display: flex; gap: 15px; justify-content: center; flex-wrap: wrap;">
+                <a href="#approach" class="btn btn-person-centered">Our Person-Centered Approach</a>
+                <a href="#family-care" class="btn btn-family">For Families & Individuals</a>
+                <a href="tel:6472870676" class="btn btn-secondary"><i class="fas fa-phone"></i> (647) 287-0676</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Person-Centered Banner -->
+    <section class="person-centered-banner">
+        <div class="container">
+            <h3>Our Core Philosophy: Person-Centered Care</h3>
+            <p>Every individual is unique. We prioritize personal preferences, values, and needs in all our staffing solutions—whether for healthcare facilities or families.</p>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="services" id="services">
+        <div class="container">
+            <div class="section-title">
+                <h2>Our Staffing Services</h2>
+                <p>We provide qualified healthcare professionals to facilities AND directly to families, always using our person-centered approach.</p>
+            </div>
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-user-nurse"></i>
+                    </div>
+                    <div class="service-content">
+                        <h3>Personal Support Workers (PSWs)</h3>
+                        <p>Person-centered PSWs who focus on individual preferences for personal care, daily living activities, and companionship.</p>
+                    </div>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-hands-helping"></i>
+                    </div>
+                    <div class="service-content">
+                        <h3>Developmental Service Workers (DSWs)</h3>
+                        <p>DSWs trained in person-centered approaches to support individuals with developmental disabilities according to their unique needs.</p>
+                    </div>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-home-heart"></i>
+                    </div>
+                    <div class="service-content">
+                        <h3>In-Home Care Services</h3>
+                        <p>Caregivers who provide personalized support for aging parents or vulnerable family members in the comfort of their own home.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Person-Centered Approach Section -->
+    <section class="approach" id="approach">
+        <div class="container">
+            <div class="section-title">
+                <h2>Our Person-Centered Approach</h2>
+                <p>We believe that effective healthcare starts with understanding and respecting each individual's unique needs, preferences, and values.</p>
+            </div>
+            
+            <div class="approach-content">
+                <div class="approach-text">
+                    <h3>What is Person-Centered Care?</h3>
+                    <p>Person-centered care is an approach that places the individual at the heart of their care. It recognizes that each person has unique preferences, values, and needs that should guide all healthcare decisions and interactions.</p>
+                    <p>At GreatWellness Services, we don't just fill staffing positions—we match caregivers based on personality, communication style, and care philosophy to ensure meaningful connections and effective support.</p>
+                    
+                    <div class="approach-principles">
+                        <div class="principle">
+                            <i class="fas fa-user-check"></i>
+                            <h4>Individualized Care</h4>
+                            <p>Tailored support that respects personal preferences, routines, and lifestyle choices.</p>
+                        </div>
+                        <div class="principle">
+                            <i class="fas fa-comments"></i>
+                            <h4>Respectful Communication</h4>
+                            <p>Active listening and clear communication that honors each person's voice and choices.</p>
+                        </div>
+                        <div class="principle">
+                            <i class="fas fa-handshake"></i>
+                            <h4>Collaborative Partnership</h4>
+                            <p>Working together with individuals, families, and care teams to achieve shared goals.</p>
+                        </div>
+                        <div class="principle">
+                            <i class="fas fa-heart"></i>
+                            <h4>Dignity & Respect</h4>
+                            <p>Treating every person with the utmost respect and preserving their dignity in all situations.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="approach-image">
+                    <img src="https://images.unsplash.com/photo-1576091160399-112ba8d25d1f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80" alt="Person-centered care conversation" style="width:100%; border-radius:10px; box-shadow: 0 5px 15px rgba(0,0,0,0.1);">
+                </div>
+            </div>
+            
+            <div style="margin-top: 50px; background-color: white; padding: 30px; border-radius: 10px; box-shadow: 0 5px 15px rgba(0,0,0,0.05);">
+                <h3 style="color: var(--person-centered); margin-bottom: 20px; text-align: center;">How Our Person-Centered Approach Benefits You</h3>
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px;">
+                    <div style="text-align: center; padding: 20px;">
+                        <i class="fas fa-smile" style="font-size: 2rem; color: var(--person-centered); margin-bottom: 15px;"></i>
+                        <h4>Improved Satisfaction</h4>
+                        <p>Higher satisfaction rates for both care recipients and caregivers</p>
+                    </div>
+                    <div style="text-align: center; padding: 20px;">
+                        <i class="fas fa-tasks" style="font-size: 2rem; color: var(--person-centered); margin-bottom: 15px;"></i>
+                        <h4>Better Outcomes</h4>
+                        <p>More effective care that aligns with personal goals and preferences</p>
+                    </div>
+                    <div style="text-align: center; padding: 20px;">
+                        <i class="fas fa-users" style="font-size: 2rem; color: var(--person-centered); margin-bottom: 15px;"></i>
+                        <h4>Stronger Relationships</h4>
+                        <p>Meaningful connections between caregivers and those they support</p>
+                    </div>
+                    <div style="text-align: center; padding: 20px;">
+                        <i class="fas fa-shield-alt" style="font-size: 2rem; color: var(--person-centered); margin-bottom: 15px;"></i>
+                        <h4>Reduced Stress</h4>
+                        <p>Less anxiety and stress for individuals and their families</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Family Care Section -->
+    <section class="family-care" id="family-care">
+        <div class="container">
+            <div class="section-title">
+                <h2>Person-Centered Care for Your Loved Ones</h2>
+                <p>We help families find caregivers who understand and respect their loved one's unique personality, preferences, and needs.</p>
+            </div>
+            
+            <div class="family-grid">
+                <div class="family-content">
+                    <h3>Personalized In-Home Care</h3>
+                    <p>Our person-centered approach means we take the time to understand your loved one's routines, preferences, and personality before matching them with a caregiver. We believe care should adapt to the person, not the other way around.</p>
+                    
+                    <ul>
+                        <li><strong>Customized Care Plans:</strong> Developed with input from the individual and family</li>
+                        <li><strong>Personality Matching:</strong> Caregivers selected based on compatibility and shared interests</li>
+                        <li><strong>Choice & Control:</strong> Individuals participate in decisions about their care</li>
+                        <li><strong>Cultural Sensitivity:</strong> Respect for cultural, religious, and personal values</li>
+                        <li><strong>Routine Respect:</strong> Care that works with existing daily routines and preferences</li>
+                        <li><strong>Ongoing Adjustments:</strong> Regular reviews to ensure care continues to meet changing needs</li>
+                    </ul>
+                    
+                    <div style="margin-top: 30px; display: flex; gap: 15px; flex-wrap: wrap;">
+                        <a href="#contact" class="btn btn-family">Request Personalized Care</a>
+                        <a href="tel:6472870676" class="btn btn-outline">Call for Consultation</a>
+                    </div>
+                </div>
+                
+                <div class="family-image">
+                    <img src="https://images.unsplash.com/photo-1579684385127-1ef15d508118?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1180&q=80" alt="Caregiver assisting elderly person at home">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Get Started Section -->
+    <section class="get-started" id="get-started">
+        <div class="container">
+            <div class="section-title">
+                <h2>How Our Person-Centered Process Works</h2>
+                <p>Our approach ensures that individual needs and preferences are at the center of every staffing decision.</p>
+            </div>
+            
+            <div class="process-tabs">
+                <button class="tab-btn active" data-tab="family-tab">For Families & Individuals</button>
+                <button class="tab-btn" data-tab="facility-tab">For Healthcare Facilities</button>
+                <button class="tab-btn" data-tab="professional-tab">For Healthcare Professionals</button>
+            </div>
+            
+            <!-- For Families Tab -->
+            <div id="family-tab" class="tab-content active">
+                <div class="section-title">
+                    <h3>Get Person-Centered Care for Your Loved One</h3>
+                    <p>Our process focuses on understanding the individual first, then finding the perfect caregiver match.</p>
+                </div>
+                
+                <div class="process-steps">
+                    <div class="step">
+                        <div class="step-number">1</div>
+                        <h3>Person-Centered Assessment</h3>
+                        <p>We conduct a detailed assessment focusing on the individual's personality, preferences, routines, values, and care needs.</p>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">2</div>
+                        <h3>Caregiver Matching</h3>
+                        <p>Using our person-centered approach, we match based on personality, interests, communication style, and care philosophy.</p>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">3</div>
+                        <h3>Personalized Care Plan</h3>
+                        <p>We develop a customized care plan that respects the individual's preferences and involves them in decision-making.</p>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">4</div>
+                        <h3>Ongoing Support & Adjustment</h3>
+                        <p>Regular check-ins to ensure the care remains person-centered and adapts to changing needs or preferences.</p>
+                    </div>
+                </div>
+                
+                <div class="requirements">
+                    <h3>Our Person-Centered Commitment to Families</h3>
+                    <ul>
+                        <li><strong>Choice & Control:</strong> Individuals participate in care decisions and caregiver selection</li>
+                        <li><strong>Respect for Preferences:</strong> Daily routines, food preferences, and activities are honored</li>
+                        <li><strong>Communication Focus:</strong> We ensure the individual's voice is heard and respected</li>
+                        <li><strong>Cultural Competence:</strong> Caregivers respect cultural, religious, and personal values</li>
+                        <li><strong>Relationship Building:</strong> We prioritize continuity to build trusting relationships</li>
+                        <li><strong>Flexible Adaptation:</strong> Care plans evolve as needs and preferences change</li>
+                    </ul>
+                    <div style="margin-top: 20px;">
+                        <a href="#contact" class="btn btn-family">Start Person-Centered Care</a>
+                        <a href="tel:6472870676" class="btn btn-outline" style="margin-left: 15px;">Call for Free Assessment</a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- For Healthcare Facilities Tab -->
+            <div id="facility-tab" class="tab-content">
+                <div class="section-title">
+                    <h3>Person-Centered Staffing for Your Facility</h3>
+                    <p>We provide staff who are trained in person-centered approaches and understand the importance of individualized care.</p>
+                </div>
+                
+                <div class="process-steps">
+                    <div class="step">
+                        <div class="step-number">1</div>
+                        <h3>Facility Culture Assessment</h3>
+                        <p>We learn about your facility's person-centered care philosophy and specific resident/patient needs.</p>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">2</div>
+                        <h3>Staff Matching</h3>
+                        <p>We match caregivers based on skills, personality, and alignment with your person-centered approach.</p>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">3</div>
+                        <h3>Orientation & Training</h3>
+                        <p>Staff receive orientation to your facility's specific person-centered practices and resident preferences.</p>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">4</div>
+                        <h3>Ongoing Quality Assurance</h3>
+                        <p>Regular feedback and support to ensure staff maintain person-centered care standards.</p>
+                    </div>
+                </div>
+                
+                <div class="requirements">
+                    <h3>Benefits of Our Person-Centered Staffing</h3>
+                    <ul>
+                        <li><strong>Higher Quality Care:</strong> Staff trained in person-centered approaches provide better care</li>
+                        <li><strong>Improved Resident Satisfaction:</strong> Personalized attention leads to happier residents</li>
+                        <li><strong>Reduced Staff Turnover:</strong> Person-centered environments are more rewarding for staff</li>
+                        <li><strong>Better Outcomes:</strong> Individualized care leads to improved health and wellbeing</li>
+                        <li><strong>Regulatory Compliance:</strong> Supports compliance with person-centered care standards</li>
+                        <li><strong>Enhanced Reputation:</strong> Facilities known for person-centered care attract more residents</li>
+                    </ul>
+                    <a href="#contact" class="btn">Request Person-Centered Staff</a>
+                </div>
+            </div>
+            
+            <!-- For Healthcare Professionals Tab -->
+            <div id="professional-tab" class="tab-content">
+                <div class="section-title">
+                    <h3>Join Our Person-Centered Team</h3>
+                    <p>Work with an agency that values and promotes person-centered care in all settings.</p>
+                </div>
+                
+                <div class="process-steps">
+                    <div class="step">
+                        <div class="step-number">1</div>
+                        <h3>Values Assessment</h3>
+                        <p>We assess your commitment to person-centered care and your approach to individualized support.</p>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">2</div>
+                        <h3>Person-Centered Training</h3>
+                        <p>Receive training in person-centered approaches, communication, and individualized care planning.</p>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">3</div>
+                        <h3>Individualized Matching</h3>
+                        <p>We match you with clients or facilities based on your skills, personality, and care philosophy.</p>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">4</div>
+                        <h3>Ongoing Development</h3>
+                        <p>Continuous training and support to enhance your person-centered care skills.</p>
+                    </div>
+                </div>
+                
+                <div class="requirements">
+                    <h3>Why Work With Our Person-Centered Agency</h3>
+                    <ul>
+                        <li><strong>Meaningful Work:</strong> Build meaningful relationships with those you support</li>
+                        <li><strong>Professional Growth:</strong> Training in evidence-based person-centered approaches</li>
+                        <li><strong>Better Work Environment:</strong> Assignments that value individualized care</li>
+                        <li><strong>Supportive Team:</strong> Colleagues and supervisors who share person-centered values</li>
+                        <li><strong>Client Satisfaction:</strong> Happier clients lead to more rewarding work experiences</li>
+                        <li><strong>Career Advancement:</strong> Opportunities to specialize in person-centered care practices</li>
+                    </ul>
+                    
+                    <div style="margin-top: 30px;">
+                        <a href="#contact" class="btn">Join Our Person-Centered Team</a>
+                        <a href="tel:6472870676" class="btn btn-outline" style="margin-left: 15px;">Call to Learn More</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about" id="about">
+        <div class="container">
+            <div class="about-content">
+                <div class="about-text">
+                    <h2>Our Commitment to Person-Centered Care</h2>
+                    <p>Based in Welland, GreatWellness Services has been championing person-centered approaches since 2010. We believe that true wellness comes from care that respects individual autonomy, preferences, and dignity.</p>
+                    <p>Our local presence in the Niagara Region allows us to provide personalized, person-centered staffing solutions that meet the unique needs of each client—whether it's a large healthcare facility or a family caring for a loved one at home.</p>
+                    <div class="about-features">
+                        <div class="feature">
+                            <i class="fas fa-heart"></i>
+                            <div>
+                                <h4>Person-Centered Philosophy</h4>
+                                <p>Every staffing decision begins with understanding individual needs and preferences.</p>
+                            </div>
+                        </div>
+                        <div class="feature">
+                            <i class="fas fa-home"></i>
+                            <div>
+                                <h4>Local & Personalized</h4>
+                                <p>Based in Welland, we understand and serve the specific needs of Niagara Region.</p>
+                            </div>
+                        </div>
+                        <div class="feature">
+                            <i class="fas fa-graduation-cap"></i>
+                            <div>
+                                <h4>Continuous Training</h4>
+                                <p>Ongoing education in person-centered approaches for all our staff.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-image">
+                    <img src="https://images.unsplash.com/photo-1582750433449-648ed127bb54?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1167&q=80" alt="Healthcare professionals working together" style="width:100%; border-radius:10px;">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="stats">
+        <div class="container">
+            <div class="stats-grid">
+                <div class="stat-item">
+                    <h3>500+</h3>
+                    <p>Person-Centered Professionals</p>
+                </div>
+                <div class="stat-item">
+                    <h3>120+</h3>
+                    <p>Healthcare Facilities Served</p>
+                </div>
+                <div class="stat-item">
+                    <h3>200+</h3>
+                    <p>Families Helped</p>
+                </div>
+                <div class="stat-item">
+                    <h3>98%</h3>
+                    <p>Satisfaction with Person-Centered Approach</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Form Section -->
+    <section class="contact-form" id="contact">
+        <div class="container">
+            <div class="section-title">
+                <h2>Contact Us</h2>
+                <p>Get in touch to learn more about our person-centered approach to healthcare staffing.</p>
+            </div>
+            <div class="contact-container">
+                <div class="contact-info">
+                    <h3>Experience Person-Centered Care</h3>
+                    <p>Whether you're a healthcare facility, a family seeking care, or a healthcare professional who values person-centered approaches, we're here to help.</p>
+                    
+                    <div class="contact-details">
+                        <p><i class="fas fa-map-marker-alt"></i> <strong>Address:</strong> 62 Watt Ave, Welland L3B 1J3 ON</p>
+                        <p><i class="fas fa-phone"></i> <strong>Phone:</strong> <a href="tel:6472870676" style="color: var(--accent); text-decoration: none;">(647) 287-0676</a></p>
+                        <p><i class="fas fa-envelope"></i> <strong>Email:</strong> <a href="mailto:greatwellnessservices@gmail.com" style="color: var(--accent); text-decoration: none;">greatwellnessservices@gmail.com</a></p>
+                        <p><i class="fas fa-clock"></i> <strong>Hours:</strong> Monday-Friday: 8:00 AM - 6:00 PM<br>Weekends: Emergency calls only</p>
+                        <p><i class="fas fa-map-marked-alt"></i> <strong>Serving:</strong> Welland, Niagara Region, and across Ontario</p>
+                    </div>
+                    
+                    <div style="margin-top: 30px; padding: 20px; background-color: var(--light); border-radius: 5px;">
+                        <h4 style="color: var(--person-centered); margin-bottom: 10px;">Free Person-Centered Assessment</h4>
+                        <p>Call us for a <strong>free, no-obligation assessment</strong> to discuss how our person-centered approach can meet your needs.</p>
+                        <a href="tel:6472870676" class="btn btn-person-centered" style="margin-top: 10px; display: inline-block;">Call for Free Assessment</a>
+                    </div>
+                    
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+                
+                <div class="contact-form-container">
+                    <form id="staffRequestForm">
+                        <div class="form-group">
+                            <label for="name">Full Name</label>
+                            <input type="text" id="name" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="type">I am contacting you as a:</label>
+                            <select id="type" required>
+                                <option value="">Select One</option>
+                                <option value="family">Family/Individual (Need person-centered care)</option>
+                                <option value="facility">Healthcare Facility (Need person-centered staff)</option>
+                                <option value="professional">Healthcare Professional (Value person-centered care)</option>
+                                <option value="other">Other Inquiry</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="organization">Organization / Family Name</label>
+                            <input type="text" id="organization" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="phone">Phone Number</label>
+                            <input type="tel" id="phone" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="email">Email Address</label>
+                            <input type="email" id="email" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="staffType">Type of Care/Staff Needed</label>
+                            <select id="staffType" required>
+                                <option value="">Select Type</option>
+                                <option value="psw">Personal Support Worker (PSW)</option>
+                                <option value="dsw">Developmental Service Worker (DSW)</option>
+                                <option value="elderly-care">Elderly Care/Companionship</option>
+                                <option value="dementia">Dementia/Alzheimer's Care</option>
+                                <option value="disability">Disability Support</option>
+                                <option value="rn">Registered Nurse (RN)</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="preferences">Specific Preferences or Needs</label>
+                            <textarea id="preferences" placeholder="Tell us about any specific preferences, routines, or personal values that are important for person-centered care..."></textarea>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="message">Additional Details</label>
+                            <textarea id="message" placeholder="Any other information that would help us provide person-centered service..."></textarea>
+                        </div>
+                        
+                        <button type="submit" class="btn btn-person-centered">Submit Request</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta">
+        <div class="container">
+            <h2>Experience the Difference of Person-Centered Care</h2>
+            <p>Join the many healthcare facilities and families across the Niagara Region who trust GreatWellness Services for person-centered staffing solutions.</p>
+            <div style="display: flex; gap: 15px; justify-content: center; flex-wrap: wrap;">
+                <a href="#approach" class="btn btn-person-centered">Learn About Our Approach</a>
+                <a href="#family-care" class="btn btn-family">For Families</a>
+                <a href="tel:6472870676" class="btn btn-secondary"><i class="fas fa-phone"></i> Call Now: (647) 287-0676</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3>GreatWellness Services</h3>
+                    <p>Providing person-centered healthcare staffing to facilities AND families across Ontario since 2010.</p>
+                    <p><i class="fas fa-map-marker-alt"></i> 62 Watt Ave, Welland L3B 1J3 ON</p>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+                <div class="footer-column">
+                    <h3>Quick Links</h3>
+                    <a href="#home">Home</a>
+                    <a href="#services">Services</a>
+                    <a href="#approach">Our Approach</a>
+                    <a href="#family-care">For Families</a>
+                    <a href="#contact">Contact</a>
+                </div>
+                <div class="footer-column">
+                    <h3>Contact Info</h3>
+                    <p><i class="fas fa-map-marker-alt"></i> 62 Watt Ave, Welland L3B 1J3 ON</p>
+                    <p><i class="fas fa-phone"></i> <a href="tel:6472870676" style="color: white;">(647) 287-0676</a></p>
+                    <p><i class="fas fa-envelope"></i> <a href="mailto:greatwellnessservices@gmail.com" style="color: white;">greatwellnessservices@gmail.com</a></p>
+                    <p><i class="fas fa-clock"></i> Mon-Fri: 8am-6pm<br>Weekends: Emergency calls</p>
+                </div>
+                <div class="footer-column">
+                    <h3>Our Commitment</h3>
+                    <p>Person-Centered Care</p>
+                    <p>Individualized Support</p>
+                    <p>Respect & Dignity</p>
+                    <p>Quality Staffing</p>
+                    <a href="#contact" class="btn btn-person-centered" style="margin-top:10px; padding: 10px 20px;">Request Person-Centered Care</a>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2023 GreatWellness Services. All rights reserved. | Person-Centered Healthcare Staffing in Welland, Niagara Region, and Ontario</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+        const navMenu = document.getElementById('navMenu');
+        
+        mobileMenuBtn.addEventListener('click', () => {
+            navMenu.classList.toggle('show');
+            mobileMenuBtn.innerHTML = navMenu.classList.contains('show') 
+                ? '<i class="fas fa-times"></i>' 
+                : '<i class="fas fa-bars"></i>';
+        });
+        
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                if(targetId === '#') return;
+                
+                const targetElement = document.querySelector(targetId);
+                if(targetElement) {
+                    // Close mobile menu if open
+                    navMenu.classList.remove('show');
+                    mobileMenuBtn.innerHTML = '<i class="fas fa-bars"></i>';
+                    
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+        
+        // Tab functionality for Get Started section
+        const tabBtns = document.querySelectorAll('.tab-btn');
+        const tabContents = document.querySelectorAll('.tab-content');
+        
+        tabBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                // Remove active class from all buttons and contents
+                tabBtns.forEach(b => b.classList.remove('active'));
+                tabContents.forEach(c => c.classList.remove('active'));
+                
+                // Add active class to clicked button
+                btn.classList.add('active');
+                
+                // Show corresponding content
+                const tabId = btn.getAttribute('data-tab');
+                document.getElementById(tabId).classList.add('active');
+            });
+        });
+        
+        // Form submission handling
+        const staffRequestForm = document.getElementById('staffRequestForm');
+        
+        staffRequestForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            
+            // Get form data
+            const name = document.getElementById('name').value;
+            const type = document.getElementById('type').value;
+            const organization = document.getElementById('organization').value;
+            const phone = document.getElementById('phone').value;
+            const email = document.getElementById('email').value;
+            const staffType = document.getElementById('staffType').value;
+            const preferences = document.getElementById('preferences').value;
+            
+            // Determine client type for message
+            const clientType = {
+                'family': 'Family/Individual seeking person-centered care',
+                'facility': 'Healthcare Facility needing person-centered staff',
+                'professional': 'Healthcare Professional valuing person-centered care',
+                'other': 'Other inquiry'
+            }[type] || 'Client';
+            
+            const staffTypeText = {
+                'psw': 'Personal Support Worker (PSW)',
+                'dsw': 'Developmental Service Worker (DSW)',
+                'elderly-care': 'Elderly Care/Companionship',
+                'dementia': 'Dementia/Alzheimer\'s Care',
+                'disability': 'Disability Support',
+                'rn': 'Registered Nurse (RN)',
+                'other': 'Other Healthcare Service'
+            }[staffType] || 'Healthcare Service';
+            
+            let preferencesText = '';
+            if (preferences) {
+                preferencesText = `\n\nWe've noted your preferences for person-centered care and will ensure these are incorporated into our matching process.`;
+            }
+            
+            alert(`Thank you ${name}!\n\nWe have received your request for person-centered care as a ${clientType}.\n\nService Needed: ${staffTypeText}${preferencesText}\n\nOur person-centered care team will contact you at ${phone} or ${email} within 24 hours to begin our person-centered assessment process.\n\nFor immediate assistance, please call us at (647) 287-0676.`);
+            
+            // Reset form
+            staffRequestForm.reset();
+        });
+        
+        // Make phone numbers clickable on mobile
+        document.querySelectorAll('a[href^="tel:"]').forEach(phoneLink => {
+            phoneLink.addEventListener('click', (e) => {
+                // Close mobile menu if open
+                navMenu.classList.remove('show');
+                mobileMenuBtn.innerHTML = '<i class="fas fa-bars"></i>';
+            });
+        });
+    </script>
+</body>
+</html>
