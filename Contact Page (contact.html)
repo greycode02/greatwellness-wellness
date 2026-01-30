@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us | GreatWellness Services</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Header & Navigation -->
+    <header class="header">
+        <div class="container header-container">
+            <div class="logo">
+                <a href="index.html">
+                    <i class="fas fa-hand-holding-medical"></i>
+                    <h1>Great<span>Wellness</span> Services</h1>
+                </a>
+            </div>
+            <button class="mobile-menu-btn" id="mobileMenuBtn">
+                <i class="fas fa-bars"></i>
+            </button>
+            <nav class="nav">
+                <ul id="navMenu">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="forms.html">Online Forms</a></li>
+                    <li><a href="contact.html" class="active">Contact</a></li>
+                    <li><a href="forms.html" class="btn btn-primary btn-small">Submit Request</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Page Hero -->
+    <section class="page-hero">
+        <div class="container">
+            <h1>Contact GreatWellness Services</h1>
+            <p>Get in touch with our team for healthcare staffing solutions</p>
+        </div>
+    </section>
+
+    <!-- Contact Information -->
+    <section class="section-padding">
+        <div class="container">
+            <div class="contact-grid">
+                <div class="contact-info">
+                    <h2>Get In Touch</h2>
+                    <p>Whether you're a healthcare facility needing staff, a family seeking care for a loved one, or a healthcare professional looking for work, we're here to help.</p>
+                    
+                    <div class="contact-details">
+                        <p><i class="fas fa-map-marker-alt"></i> <strong>Address:</strong> 62 Watt Ave, Welland L3B 1J3 ON</p>
+                        <p><i class="fas fa-phone"></i> <strong>Phone:</strong> <a href="tel:6472870676">(647) 287-0676</a></p>
+                        <p><i class="fas fa-envelope"></i> <strong>Email:</strong> <a href="mailto:greatwellnessservices@gmail.com">greatwellnessservices@gmail.com</a></p>
+                        <p><i class="fas fa-fax"></i> <strong>Fax:</strong> (905) 555-1234</p>
+                    </div>
+                    
+                    <div class="contact-hours">
+                        <h4>Business Hours</h4>
+                        <p><strong>Monday - Friday:</strong> 8:00 AM - 6:00 PM</p>
+                        <p><strong>Saturday:</strong> 9:00 AM - 1:00 PM (Emergency calls only)</p>
+                        <p><strong>Sunday:</strong> Closed (Emergency calls only)</p>
+                        <p><em>After-hours emergency line available for urgent staffing needs</em></p>
+                    </div>
+                    
+                    <div class="social-icons" style="margin-top: 30px;">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+                
+                <div class="contact-form">
+                    <div class="form-container">
+                        <div class="form-header">
+                            <h3>Send Us a Message</h3>
+                            <p>Fill out the form below and we'll get back to you within 24 hours</p>
+                        </div>
+                        
+                        <form id="contactForm">
+                            <div class="form-group">
+                                <label for="contactName" class="required">Full Name</label>
+                                <input type="text" id="contactName" required>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="contactEmail" class="required">Email Address</label>
+                                <input type="email" id="contactEmail" required>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="contactPhone" class="required">Phone Number</label>
+                                <input type="tel" id="contactPhone" required>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="contactType">I am contacting you as a:</label>
+                                <select id="contactType">
+                                    <option value="">Select One</option>
+                                    <option value="facility">Healthcare Facility</option>
+                                    <option value="family">Family/Individual</option>
+                                    <option value="professional">Healthcare Professional</option>
+                                    <option value="general">General Inquiry</option>
+                                </select>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="contactSubject">Subject</label>
+                                <input type="text" id="contactSubject">
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="contactMessage" class="required">Message</label>
+                                <textarea id="contactMessage" required placeholder="Please describe your inquiry or staffing needs..."></textarea>
+                            </div>
+                            
+                            <div class="checkbox-group">
+                                <input type="checkbox" id="contactConsent" required>
+                                <label for="contactConsent" class="required">I consent to GreatWellness Services collecting and storing my information for contact purposes</label>
+                            </div>
+                            
+                            <div class="form-footer">
+                                <p><i class="fas fa-lock"></i> Your information is secure and confidential</p>
+                                <button type="submit" class="btn btn-primary">Send Message</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Map & Location -->
+    <section class="section-padding bg-light">
+        <div class="container">
+            <div class="section-title">
+                <h2>Our Location</h2>
+                <p>Visit us at our Welland office</p>
+            </div>
+            
+            <div class="contact-grid">
+                <div class="contact-map">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2915.0000000000005!2d-79.25000000000001!3d43.00000000000001!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNDPCsDAwJzAwLjAiTiA3OcKwMTUnMDAuMCJX!5e0!3m2!1sen!2sca!4v1234567890123!5m2!1sen!2sca" 
+                            allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+                    </iframe>
+                </div>
+                
+                <div class="location-info">
+                    <h3>Getting to Our Office</h3>
+                    <p><strong>Address:</strong> 62 Watt Ave, Welland L3B 1J3 ON</p>
+                    
+                    <h4>Parking</h4>
+                    <p>Free parking is available in front of our building and in the adjacent parking lot.</p>
+                    
+                    <h4>Public Transportation</h4>
+                    <p>Our office is accessible via Welland Transit routes 1, 2, and 3. The nearest bus stop is at the corner of Watt Ave and Niagara Street.</p>
+                    
+                    <h4>Accessibility</h4>
+                    <p>Our office is wheelchair accessible with ramp access and automatic doors. Please let us know if you require any accommodations for your visit.</p>
+                    
+                    <div class="emergency-contact" style="margin-top: 30px; padding: 20px; background-color: var(--light); border-left: 4px solid var(--accent);">
+                        <h4><i class="fas fa-exclamation-circle" style="color: var(--accent);"></i> Emergency Contact</h4>
+                        <p>For urgent staffing needs outside business hours, please call our emergency line:</p>
+                        <p style="font-size: 1.2rem; font-weight: 600; color: var(--primary);">
+                            <i class="fas fa-phone"></i> (647) 287-0676 (Press 1 for emergencies)
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Departments -->
+    <section class="section-padding">
+        <div class="container">
+            <div class="section-title">
+                <h2>Contact Our Departments</h2>
+                <p>Connect with the right team for your needs</p>
+            </div>
+            
+            <div class="departments-grid">
+                <div class="department-card">
+                    <div class="department-icon">
+                        <i class="fas fa-hospital"></i>
+                    </div>
+                    <h3>Facility Staffing</h3>
+                    <p>For hospitals, clinics, and long-term care facilities</p>
+                    <p><strong>Email:</strong> facilities@greatwellness.ca</p>
+                    <p><strong>Phone:</strong> Ext. 101</p>
+                </div>
+                
+                <div class="department-card">
+                    <div class="department-icon">
+                        <i class="fas fa-home-heart"></i>
+                    </div>
+                    <h3>Family Care Services</h3>
+                    <p>For individuals and families needing in-home care</p>
+                    <p><strong>Email:</strong> familycare@greatwellness.ca</p>
+                    <p><strong>Phone:</strong> Ext. 102</p>
+                </div>
+                
+                <div class="department-card">
+                    <div class="department-icon">
+                        <i class="fas fa-user-md"></i>
+                    </div>
+                    <h3>Healthcare Professionals</h3>
+                    <p>For PSWs, DSWs, and nurses looking for work</p>
+                    <p><strong>Email:</strong> careers@greatwellness.ca</p>
+                    <p><strong>Phone:</strong> Ext. 103</p>
+                </div>
+                
+                <div class="department-card">
+                    <div class="department-icon">
+                        <i class="fas fa-headset"></i>
+                    </div>
+                    <h3>Client Support</h3>
+                    <p>For existing clients and general inquiries</p>
+                    <p><strong>Email:</strong> support@greatwellness.ca</p>
+                    <p><strong>Phone:</strong> Ext. 104</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="section-padding bg-light">
+        <div class="container">
+            <div class="section-title">
+                <h2>Frequently Asked Questions</h2>
+                <p>Common questions about contacting us</p>
+            </div>
+            
+            <div class="faq-grid">
+                <div class="faq-item">
+                    <h3>What's the fastest way to request staff?</h3>
+                    <p>The quickest way is to use our <a href="forms.html">online forms</a> or call us directly at (647) 287-0676 during business hours.</p>
+                </div>
+                
+                <div class="faq-item">
+                    <h3>Do you offer 24/7 emergency staffing?</h3>
+                    <p>Yes, we have an emergency line for urgent staffing needs outside regular business hours. Call (647) 287-0676 and press 1 for emergencies.</p>
+                </div>
+                
+                <div class="faq-item">
+                    <h3>How quickly can you fill staffing requests?</h3>
+                    <p>For urgent requests, we can often provide staff within 24-48 hours. Standard requests are typically filled within 3-5 business days.</p>
+                </div>
+                
+                <div class="faq-item">
+                    <h3>Can I visit your office without an appointment?</h3>
+                    <p>While walk-ins are welcome, we recommend calling ahead to schedule an appointment to ensure the right team member is available to assist you.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta section-padding bg-primary text-white">
+        <div class="container">
+            <div class="cta-content">
+                <h2>Need Immediate Assistance?</h2>
+                <p>For urgent staffing needs or emergency care services, don't hesitate to contact us right away.</p>
+                <div class="cta-buttons">
+                    <a href="tel:6472870676" class="btn btn-accent"><i class="fas fa-phone"></i> Call Now (647) 287-0676</a>
+                    <a href="forms.html" class="btn btn-outline-white">Submit Online Request</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <div class="footer-logo">
+                        <i class="fas fa-hand-holding-medical"></i>
+                        <h3>Great<span>Wellness</span> Services</h3>
+                    </div>
+                    <p>Person-centered healthcare staffing solutions for facilities and families across Ontario since 2010.</p>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="forms.html">Online Forms</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Our Services</h4>
+                    <ul>
+                        <li><a href="services.html#psw">PSW Staffing</a></li>
+                        <li><a href="services.html#dsw">DSW Staffing</a></li>
+                        <li><a href="services.html#home-care">In-Home Care</a></li>
+                        <li><a href="services.html#facility">Facility Staffing</a></li>
+                        <li><a href="services.html#specialized">Specialized Care</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Contact Info</h4>
+                    <ul class="contact-info">
+                        <li><i class="fas fa-map-marker-alt"></i> 62 Watt Ave, Welland L3B 1J3 ON</li>
+                        <li><i class="fas fa-phone"></i> <a href="tel:6472870676">(647) 287-0676</a></li>
+                        <li><i class="fas fa-envelope"></i> <a href="mailto:greatwellnessservices@gmail.com">greatwellnessservices@gmail.com</a></li>
+                        <li><i class="fas fa-clock"></i> Mon-Fri: 8am-6pm</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023 GreatWellness Services. All rights reserved. | Serving Welland, Niagara Region, and Ontario</p>
+                <p><a href="privacy.html">Privacy Policy</a> | <a href="terms.html">Terms of Service</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Success Modal -->
+    <div class="success-modal" id="successModal">
+        <div class="success-modal-content">
+            <button class="btn btn-outline" style="position: absolute; top: 15px; right: 15px;" onclick="closeSuccessModal()">
+                <i class="fas fa-times"></i>
+            </button>
+            <div class="success-icon">
+                <i class="fas fa-check-circle"></i>
+            </div>
+            <h3>Message Sent Successfully!</h3>
+            <p id="successMessage">Thank you for contacting GreatWellness Services. Our team will get back to you within 24 hours.</p>
+            <p style="margin-top: 15px; color: var(--gray); font-size: 0.9rem;">
+                <i class="fas fa-lock"></i> Your information is secure and confidential
+            </p>
+            <button class="btn btn-success" style="margin-top: 20px;" onclick="closeSuccessModal()">Close</button>
+        </div>
+    </div>
+
+    <script src="assets/js/main.js"></script>
+    <script>
+        // Contact form handling
+        document.addEventListener('DOMContentLoaded', function() {
+            const contactForm = document.getElementById('contactForm');
+            const successModal = document.getElementById('successModal');
+            const successMessage = document.getElementById('successMessage');
+            
+            if (contactForm) {
+                contactForm.addEventListener('submit', function(e) {
+                    e.preventDefault();
+                    
+                    const contactName = document.getElementById('contactName').value;
+                    
+                    if (successMessage) {
+                        successMessage.textContent = `Thank you ${contactName}! Your message has been sent successfully. Our team will contact you within 24 hours.`;
+                    }
+                    
+                    if (successModal) {
+                        successModal.style.display = 'block';
+                    }
+                    
+                    // Reset form
+                    contactForm.reset();
+                    
+                    // Scroll to success message
+                    setTimeout(() => {
+                        if (successModal) {
+                            successModal.scrollIntoView({ behavior: 'smooth' });
+                        }
+                    }, 100);
+                });
+            }
+            
+            // Add some additional CSS for new elements
+            const style = document.createElement('style');
+            style.textContent = `
+                .departments-grid {
+                    display: grid;
+                    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+                    gap: 30px;
+                    margin-top: 40px;
+                }
+                
+                .department-card {
+                    text-align: center;
+                    padding: 30px 20px;
+                    background-color: white;
+                    border-radius: 10px;
+                    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+                }
+                
+                .department-icon {
+                    font-size: 2.5rem;
+                    color: var(--primary);
+                    margin-bottom: 20px;
+                }
+                
+                .department-card h3 {
+                    color: var(--primary);
+                    margin-bottom: 10px;
+                }
+                
+                .department-card p {
+                    margin-bottom: 5px;
+                    font-size: 0.95rem;
+                }
+                
+                .faq-grid {
+                    display: grid;
+                    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+                    gap: 30px;
+                    margin-top: 40px;
+                }
+                
+                .faq-item {
+                    background-color: white;
+                    padding: 25px;
+                    border-radius: 10px;
+                    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+                }
+                
+                .faq-item h3 {
+                    color: var(--primary);
+                    margin-bottom: 15px;
+                    font-size: 1.2rem;
+                }
+                
+                .faq-item p {
+                    margin-bottom: 0;
+                }
+                
+                .emergency-contact h4 {
+                    display: flex;
+                    align-items: center;
+                    gap: 10px;
+                }
+            `;
+            document.head.appendChild(style);
+        });
+    </script>
+</body>
+</html>
