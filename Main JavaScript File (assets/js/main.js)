@@ -1,0 +1,172 @@
+// Main JavaScript for all GreatWellness Services pages
+
+// Mobile menu toggle
+document.addEventListener('DOMContentLoaded', function() {
+    const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+    const navMenu = document.getElementById('navMenu');
+    
+    if (mobileMenuBtn && navMenu) {
+        mobileMenuBtn.addEventListener('click', () => {
+            navMenu.classList.toggle('show');
+            mobileMenuBtn.innerHTML = navMenu.classList.contains('show') 
+                ? '<i class="fas fa-times"></i>' 
+                : '<i class="fas fa-bars"></i>';
+        });
+    }
+    
+    // Tab functionality for services page
+    const tabBtns = document.querySelectorAll('.tab-btn');
+    const tabPanes = document.querySelectorAll('.tab-pane');
+    
+    if (tabBtns.length > 0) {
+        tabBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                // Remove active class from all buttons and panes
+                tabBtns.forEach(b => b.classList.remove('active'));
+                tabPanes.forEach(p => p.classList.remove('active'));
+                
+                // Add active class to clicked button
+                btn.classList.add('active');
+                
+                // Show corresponding pane
+                const tabId = btn.getAttribute('data-tab');
+                document.getElementById(tabId).classList.add('active');
+            });
+        });
+    }
+    
+    // Form submission handling
+    const facilityForm = document.getElementById('facilityForm');
+    const familyForm = document.getElementById('familyForm');
+    const successModal = document.getElementById('successModal');
+    const successMessage = document.getElementById('successMessage');
+    
+    // Facility form submission
+    if (facilityForm) {
+        facilityForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // In a real application, you would send this data to a server
+            // For now, we'll just show a success message
+            
+            const facilityName = document.getElementById('facilityName').value;
+            const contactPerson = document.getElementById('contactPerson').value;
+            
+            if (successMessage) {
+                successMessage.textContent = `Thank you ${contactPerson}! Your staffing request for ${facilityName} has been submitted successfully. Our team will contact you within 24 hours.`;
+            }
+            
+            if (successModal) {
+                successModal.style.display = 'block';
+            }
+            
+            // Reset form
+            facilityForm.reset();
+            
+            // Scroll to success message
+            setTimeout(() => {
+                if (successModal) {
+                    successModal.scrollIntoView({ behavior: 'smooth' });
+                }
+            }, 100);
+        });
+    }
+    
+    // Family form submission
+    if (familyForm) {
+        familyForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // In a real application, you would send this data to a server
+            // For now, we'll just show a success message
+            
+            const clientName = document.getElementById('clientName').value;
+            const patientName = document.getElementById('patientName').value;
+            
+            if (successMessage) {
+                successMessage.textContent = `Thank you ${clientName}! Your care request for ${patientName} has been submitted successfully. Our team will contact you within 24 hours.`;
+            }
+            
+            if (successModal) {
+                successModal.style.display = 'block';
+            }
+            
+            // Reset form
+            familyForm.reset();
+            
+            // Scroll to success message
+            setTimeout(() => {
+                if (successModal) {
+                    successModal.scrollIntoView({ behavior: 'smooth' });
+                }
+            }, 100);
+        });
+    }
+    
+    // Close success modal
+    const closeSuccessModal = document.getElementById('closeSuccessModal');
+    if (closeSuccessModal) {
+        closeSuccessModal.addEventListener('click', function() {
+            if (successModal) {
+                successModal.style.display = 'none';
+            }
+        });
+    }
+    
+    // Close modal when clicking outside
+    window.addEventListener('click', function(e) {
+        if (successModal && e.target === successModal) {
+            successModal.style.display = 'none';
+        }
+    });
+    
+    // Initialize date inputs with today's date
+    const startDateInput = document.getElementById('startDate');
+    if (startDateInput) {
+        const today = new Date().toISOString().split('T')[0];
+        startDateInput.min = today;
+    }
+});
+
+// Close success modal function (for inline onclick)
+function closeSuccessModal() {
+    const successModal = document.getElementById('successModal');
+    if (successModal) {
+        successModal.style.display = 'none';
+    }
+}
+
+// Smooth scrolling for anchor links
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function(e) {
+        const href = this.getAttribute('href');
+        
+        // Only handle internal anchor links
+        if (href === '#' || href.startsWith('#!')) return;
+        
+        // Don't interfere with page navigation
+        if (href.startsWith('http') || href.includes('.html')) return;
+        
+        const targetElement = document.querySelector(href);
+        
+        if (targetElement) {
+            e.preventDefault();
+            
+            // Close mobile menu if open
+            const navMenu = document.getElementById('navMenu');
+            const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+            
+            if (navMenu && navMenu.classList.contains('show')) {
+                navMenu.classList.remove('show');
+                if (mobileMenuBtn) {
+                    mobileMenuBtn.innerHTML = '<i class="fas fa-bars"></i>';
+                }
+            }
+            
+            window.scrollTo({
+                top: targetElement.offsetTop - 80,
+                behavior: 'smooth'
+            });
+        }
+    });
+});
